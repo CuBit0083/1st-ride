@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'kr.entree.spigradle' version '2.2.3'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+    maven { url 'https://projectlombok.org/edge-releases' }
+    maven { url 'https://papermc.io/repo/repository/maven-public/' }
+
+}
+
+dependencies {
+    compileOnly spigotAll('1.12.2')
+    compileOnly 'junit:junit:4.12'
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+    implementation 'com.destroystokyo.paper:paper-api:1.12.2-R0.1-SNAPSHOT'
+}
+
+spigot {
+    description = "RidingPlugin - CuBit"
+    commands {
+        create("riding") {
+            permission = "admin"
+            permissionMessage = "You do not have the permission!"
+        }
+    }
+}

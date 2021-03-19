@@ -1,0 +1,8 @@
+main: org.cubit.riding.RidingCore
+name: Star-Riding
+version: 1.0-SNAPSHOT
+description: RidingPlugin - CuBit
+commands:
+  riding:
+    permission: admin
+    permission-message: You do not have the permission!
